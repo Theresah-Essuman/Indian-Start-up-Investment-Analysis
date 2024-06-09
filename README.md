@@ -189,7 +189,7 @@ data_2019.head(5)
 ![alt text](screenshot/2018.png)
 
 
-### 10.7 Checking for consistency, Renaming the colums before merging them
+### 10.7 Checking for consistency, Renaming the columns before merging them
 
 ```
 data_2018.rename(columns={
@@ -265,7 +265,7 @@ purposely to identify each of the 4 datasets withing the merged_data
 - Print all unique values in the column to check errors and anomalities
 
 
-It was observed the sector column had a lot of reapeted sector names with different value characteristcs, hence appearing to be unique, the values were mixed up with upper case values, lower case values, wrong puntuations, spelling errors
+It was observed the sector column had a lot of repeated sector names with different value characteristics, hence appearing to be unique, the values were mixed up with upper case values, lower case values, wrong puntuations, spelling errors
 
 Approach to observation - Sector mapping
 ![alt text](<screenshot/Sector mapping.png>)
@@ -303,10 +303,10 @@ print(f'Numeric values - {numeric_count}')
 ![alt text](<screenshot/Val Character.png>)
 
 
-- Values ['Series C', 'Seed', 'Pre-series A'] indicates wrong enteries, they were pushed to their respective column 'stage column'
+- Values ['Series C', 'Seed', 'Pre-series A'] indicates wrong entries, they were pushed to their respective column 'stage column'
 - All dollar symbols were dropped
-- The dahes '-' were dropped and replaced with nan
-- All values with rupee symbols where converted to dollors by multiplying the respective values by the average exchange rate
+- The dashes '-' were dropped and replaced with nan
+- All values with rupee symbols where converted to dollars by multiplying the respective values by the average exchange rate
 
 ![alt text](screenshot/Conversion.png)
 
@@ -344,15 +344,15 @@ merged_data['funding_amount'] = pd.to_numeric(merged_data['funding_amount'], err
 
 - Printed all unique values
 
-- Identify wrong values and anomalities
+- Identify wrong values and anomalies
 
 - Corrected spelling errors for consistency
 ![alt text](<screenshot/City rename.png>)
 
 
-- The remaining columns followed the same approcah in cleaning and removing all anomalities
+- The remaining columns followed the same approach in cleaning and removing all anomalies
 
-- Columns 'Founders and Founded' were both dropped from merged DataFrame as it was not relevant to the analysis and objectives.
+- Columns 'Founders and Founded' were both dropped from merged Data Frame as it was not relevant to the analysis and objectives.
 
 # Handle Missing Values in Merged DataFrame
 
